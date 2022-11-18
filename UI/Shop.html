@@ -1,0 +1,746 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../Styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="../Sources/logo-color.png">
+    <title>Porsche</title>
+</head>
+<body class="bg-sec d-flex flex-column">
+    <div class="nav w-100 d-flex flex-row justify-content-evenly align-items-center text-white">
+        <div class="col-3 m-2">
+            <a href="Home.html">
+              <img src="../Sources/logo-white.png" class="w-25" alt="">
+            </a> 
+          </div>
+        <div class="col-6 d-flex flex-row">
+            <div class="col-9 d-flex flex-row justify-content-end">
+                <div class="col-3 capitalize"><a href="Home.html">HOME</a></div>
+                <div class="col-3 capitalize"><a href="#" class="nav-active">SHOP</a></div>
+                <div class="col-3 capitalize"><a href="About-us.html">ABOUT US</a></div>
+                <div class="col-3 capitalize"><a href="Contact-us.html">CONTACT</a></div>
+            </div>
+            <div class="col-3 on-b">
+               <a href="Order-now.html" class="no-hover">Order Now</a> 
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="col-12 position-relative d-flex">
+            <img src="../Sources/wallpaper-sh.jpeg" class="w-100 slide img-dark" alt="">
+            <div class="col-5 position-absolute banner-content d-flex flex-column">
+                    <div class="col-12 text-white title capitalize">
+                        New product are now available
+                    </div>
+                    <div class="col-6 mt-3">
+                        <button class="btn bg-sec">SHOP NOW</button>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="section-header w-100 bg-prim">
+           SHOP
+        </div>
+        <div class="container col-12">
+            <div class="row mt-5 mb-5">
+                <div class="col-md-5 w-100">
+                    <div class="input-group w-100">
+                        <input class="form-control border-end-0 border" type="search" placeholder="Search..." id="example-search-input">
+                        <span class="input-group-append">
+                            <button class="btn btn-outline-secondary bg-white border-start-0 border ms-n5 search-button" type="button">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 mt-5 d-flex flex-row">
+                    <div class="col-3">
+                        <div class="col-10 list-group-1">
+                            <div class="list-title">Categories</div>
+                            <div class="list-item w-100"><a href="#">All categories</a></div>
+                            <div class="list-item w-100"><a href="#">Cars</a></div>
+                            <div class="list-item w-100"><a href="#">Parts & Accesories</a></div> 
+                            <div class="list-item w-100"><a href="#">Fashion & Accesories</a></div>
+                        </div>
+                        <div class="col-10 list-group-1">
+                            <div class="list-title">Price</div>
+                            <input type="range" class="form-range" id="customRange1">
+                            <div class="col-12 d-flex flex-row justify-content-between">
+                                <div class="highlight-dark">0$</div>
+                                <div class="highlight-dark ">300k$</div>
+                            </div>
+                        </div>
+                        <div class="col-10 list-group-1">
+                            <div class="col-12 mt-5 mb-4">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Select model</option>
+                                    <option value="1">911</option>
+                                    <option value="2">718</option>
+                                    <option value="3">Panamera</option>
+                                    <option value="3">Macan</option>
+                                    <option value="3">Cayenne</option>
+                                  </select>
+                            </div>
+                        </div>
+                        <div class="col-12 list-group-1">
+                            <div class="list-title pl-1">Best sellers</div>
+                            <div class="col-12 mt-5 mb-4 d-flex flex-column justify-content-center">
+                                <div class="col-12 d-flex flex-row mb-3">
+                                    <div class="col-6 ">
+                                        <img src="../Sources/porsche-model-718.png" class="w-100" alt="">
+                                    </div>
+                                    <div class="col-6 d-flex flex-column list-item-content">
+                                        <div class="list-item-title">718 S</div>
+                                        <div class="list-item-description">130 000$ </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 d-flex flex-row mb-3">
+                                    <div class="col-6 overflow-hidden">
+                                        <img src="../Sources/porsche-model-911.png" class="w-100" alt="">
+                                    </div>
+                                    <div class="col-6 d-flex flex-column list-item-content">
+                                        <div class="list-item-title">911 Turbo</div>
+                                        <div class="list-item-description">130 000$ </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 d-flex flex-row mb-3">
+                                    <div class="col-6 overflow-hidden">
+                                        <img src="../Sources/porsche-model-panamera.png" class="w-100" alt="">
+                                    </div>
+                                    <div class="col-6 d-flex flex-column list-item-content">
+                                        <div class="list-item-title">Panamera S</div>
+                                        <div class="list-item-description">130 000$ </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 d-flex flex-row mb-3">
+                                    <div class="col-6 overflow-hidden">
+                                        <img src="../Sources/porsche-model-macan.png" class="w-100" alt="">
+                                    </div>
+                                    <div class="col-6 d-flex flex-column list-item-content">
+                                        <div class="list-item-title">Macan S</div>
+                                        <div class="list-item-description">130 000$ </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                       
+                    </div>
+                    <div class="col-9">
+                        <div class="col-12 d-flex flex-row justify-content-between align-content-center">
+                            <div class="col-2 d-flex flex-row align-content-center">
+                                <div class="col-3 d-flex align-items-center">
+                                    <a href="#">
+                                        <i class="fa-solid fa-list"></i>
+                                    </a>
+                                </div>
+                                <div class="col-3 d-flex align-items-center">
+                                   <a href="#">
+                                      <i class="fa-solid fa-table-cells"></i>
+                                    </a>
+                                </div> 
+                            </div>
+                            <div class="col4 d-flex align-items-center">
+                                <div class="col-12 mt-5 mb-4">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Sort by</option>
+                                        <option value="1">Ascending by Price</option>
+                                        <option value="2">Descending by Price</option>
+                                        <option value="3">Ascending by Model</option>
+                                        <option value="3">Descending by MOdel</option>
+                                        <option value="3">New to Old</option>
+                                      </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 d-flex flexRow justify-content-start flex-wrap">
+                            <div class="col-4 p-5 h-100 card">
+                                <a href="Car-page.html" class="no-hover">
+                                 <div class="col-12 d-flex flex-column position-relative">
+                                    <div class="card-img">
+                                        <img src="../Sources/porsche-model-718.png" class="h-100" alt="">
+                                    </div>
+                                    <div class="col-12 list-item-title text-center mt-3 ">
+                                       718 Boxter
+                                    </div>
+                                    <div class="col-12 list-item-description text-center">
+                                        125 000$
+                                    </div>
+                                    <div class="col-12 d-flex justify-content-center">
+                                        <button class="btn col-10 bg-prim text-white d-flex align-items-center justify-content-center mt-3">
+                                            <h6 class="mb-0 bn-btn-text">Buy now </h6> 
+                                            <div class="px-2 d-flex align-items-center bn-btn-text">
+                                                <i class="fa-solid fa-bag-shopping"></i>
+                                            </div>
+                                        </button>
+                                    </div>
+                                 </div>
+                                 </a>   
+                            </div>
+                            <div class="col-4 p-5 card">
+                                <a href="Car-page.html" class="no-hover">
+                                <div class="col-12 d-flex flex-column position-relative">
+                                    <div class=" sale-tag bg-3 position-absolute">
+                                        Sale
+                                    </div>
+                                    <div class="card-img">
+                                        <img src="../Sources/rim1.png" class="h-100" alt="">
+                                   </div>
+                                   <div class="col-12 list-item-title text-center mt-3 ">
+                                      Stellar RIM
+                                   </div>
+                                   <div class="col-12 list-item-description text-center">
+                                       1 000$
+                                   </div>
+                                   <div class="col-12 d-flex justify-content-center">
+                                       <button class="btn col-10 bg-prim text-white d-flex align-items-center justify-content-center mt-3">
+                                           <h6 class="mb-0 bn-btn-text">Buy now </h6> 
+                                           <div class="px-2 d-flex align-items-center bn-btn-text">
+                                               <i class="fa-solid fa-bag-shopping"></i>
+                                           </div>
+                                       </button>
+                                   </div>
+                                </div>
+                            </a>  
+                           </div>
+                           <div class="col-4 p-5 h-100 card">
+                            <a href="Car-page.html" class="no-hover">
+                            <div class="col-12 d-flex flex-column position-relative">
+                               <div class="card-img">
+                                   <img src="../Sources/porsche-model-cayenne1.png" class="h-100" alt="">
+                               </div>
+                               <div class="col-12 list-item-title text-center mt-3 ">
+                                  Cayenne
+                               </div>
+                               <div class="col-12 list-item-description text-center">
+                                   95 000$
+                               </div>
+                               <div class="col-12 d-flex justify-content-center">
+                                   <button class="btn col-10 bg-prim text-white d-flex align-items-center justify-content-center mt-3">
+                                       <h6 class="mb-0 bn-btn-text">Buy now </h6> 
+                                       <div class="px-2 d-flex align-items-center bn-btn-text">
+                                           <i class="fa-solid fa-bag-shopping"></i>
+                                       </div>
+                                   </button>
+                               </div>
+                            </div></a>
+                       </div>
+                       <div class="col-4 p-5 card">
+                        <a href="Car-page.html" class="no-hover">
+                        <div class="col-12 d-flex flex-column position-relative">
+                            <div class=" sale-tag bg-3 position-absolute">
+                                Sale
+                            </div>
+                            <div class="card-img">
+                                <img src="../Sources/rim2.png" class="h-100" alt="">
+                           </div>
+                           <div class="col-12 list-item-title text-center mt-3 ">
+                              Flower RIM
+                           </div>
+                           <div class="col-12 list-item-description text-center">
+                               1 000$
+                           </div>
+                           <div class="col-12 d-flex justify-content-center">
+                               <button class="btn col-10 bg-prim text-white d-flex align-items-center justify-content-center mt-3">
+                                   <h6 class="mb-0 bn-btn-text">Buy now </h6> 
+                                   <div class="px-2 d-flex align-items-center bn-btn-text">
+                                       <i class="fa-solid fa-bag-shopping"></i>
+                                   </div>
+                               </button>
+                           </div>
+                        </div></a>
+                        </div>
+                        <div class="col-4 p-5 h-100 card">
+                            <a href="Car-page.html" class="no-hover">
+                            <div class="col-12 d-flex flex-column position-relative">
+                               <div class="card-img">
+                                   <img src="../Sources/porsche-model-911.png" class="h-100" alt="">
+                               </div>
+                               <div class="col-12 list-item-title text-center mt-3 ">
+                                  911 Turbo S
+                               </div>
+                               <div class="col-12 list-item-description text-center">
+                                   145 000$
+                               </div>
+                               <div class="col-12 d-flex justify-content-center">
+                                   <button class="btn col-10 bg-prim text-white d-flex align-items-center justify-content-center mt-3">
+                                       <h6 class="mb-0 bn-btn-text">Buy now </h6> 
+                                       <div class="px-2 d-flex align-items-center bn-btn-text">
+                                           <i class="fa-solid fa-bag-shopping"></i>
+                                       </div>
+                                   </button>
+                               </div>
+                            </div></a>
+                       </div>
+                       <div class="col-4 p-5 card">
+                        <a href="Car-page.html" class="no-hover">
+                        <div class="col-12 d-flex flex-column position-relative">
+                            <div class=" sale-tag bg-3 position-absolute">
+                                Sale
+                            </div>
+                            <div class="card-img">
+                                <img src="../Sources/d-wheel.png" class="h-100" alt="">
+                           </div>
+                           <div class="col-12 list-item-title text-center mt-3 ">
+                              Sport wheel
+                           </div>
+                           <div class="col-12 list-item-description text-center">
+                               500$
+                           </div>
+                           <div class="col-12 d-flex justify-content-center">
+                               <button class="btn col-10 bg-prim text-white d-flex align-items-center justify-content-center mt-3">
+                                   <h6 class="mb-0 bn-btn-text">Buy now </h6> 
+                                   <div class="px-2 d-flex align-items-center bn-btn-text">
+                                       <i class="fa-solid fa-bag-shopping"></i>
+                                   </div>
+                               </button>
+                           </div>
+                        </div></a>
+                        </div>
+                        <div class="col-4 p-5 card">
+                            <a href="Car-page.html" class="no-hover">
+                            <div class="col-12 d-flex flex-column position-relative">
+                                <div class=" sale-tag bg-3 position-absolute">
+                                    Sale
+                                </div>
+                                <div class="card-img">
+                                    <img src="../Sources/rim3.png" class="h-100" alt="">
+                               </div>
+                               <div class="col-12 list-item-title text-center mt-3 ">
+                                  Cosmic RIM
+                               </div>
+                               <div class="col-12 list-item-description text-center">
+                                   1 500$
+                               </div>
+                               <div class="col-12 d-flex justify-content-center">
+                                   <button class="btn col-10 bg-prim text-white d-flex align-items-center justify-content-center mt-3">
+                                       <h6 class="mb-0 bn-btn-text">Buy now </h6> 
+                                       <div class="px-2 d-flex align-items-center bn-btn-text">
+                                           <i class="fa-solid fa-bag-shopping"></i>
+                                       </div>
+                                   </button>
+                               </div>
+                            </div></a>
+                            </div>
+                            <div class="col-4 p-5 h-100 card">
+                                <a href="Car-page.html" class="no-hover">
+                                <div class="col-12 d-flex flex-column position-relative">
+                                   <div class="card-img">
+                                       <img src="../Sources/car-mirror2.png" class="h-100" alt="">
+                                   </div>
+                                   <div class="col-12 list-item-title text-center mt-3 ">
+                                      Mirror C672
+                                   </div>
+                                   <div class="col-12 list-item-description text-center">
+                                       200$
+                                   </div>
+                                   <div class="col-12 d-flex justify-content-center">
+                                       <button class="btn col-10 bg-prim text-white d-flex align-items-center justify-content-center mt-3">
+                                           <h6 class="mb-0 bn-btn-text">Buy now </h6> 
+                                           <div class="px-2 d-flex align-items-center bn-btn-text">
+                                               <i class="fa-solid fa-bag-shopping"></i>
+                                           </div>
+                                       </button>
+                                   </div>
+                                </div></a>
+                             </div>
+                             <div class="col-4 p-5 h-100 card">
+                                <a href="Car-page.html" class="no-hover">
+                                <div class="col-12 d-flex flex-column position-relative">
+                                   <div class="card-img">
+                                       <img src="../Sources/porsche-model-macan.png" class="h-100" alt="">
+                                   </div>
+                                   <div class="col-12 list-item-title text-center mt-3 ">
+                                      Macan S
+                                   </div>
+                                   <div class="col-12 list-item-description text-center">
+                                    60 000$
+                                   </div>
+                                   <div class="col-12 d-flex justify-content-center">
+                                       <button class="btn col-10 bg-prim text-white d-flex align-items-center justify-content-center mt-3">
+                                           <h6 class="mb-0 bn-btn-text">Buy now </h6> 
+                                           <div class="px-2 d-flex align-items-center bn-btn-text">
+                                               <i class="fa-solid fa-bag-shopping"></i>
+                                           </div>
+                                       </button>
+                                   </div>
+                                </div></a>
+                             </div>
+                             <div class="col-4 p-5 h-100 card">
+                                <a href="Car-page.html" class="no-hover">
+                                <div class="col-12 d-flex flex-column position-relative">
+                                   <div class="card-img">
+                                       <img src="../Sources/porsche-model-panamera3.png" class="h-100" alt="">
+                                   </div>
+                                   <div class="col-12 list-item-title text-center mt-3 ">
+                                      Panamera Turbo
+                                   </div>
+                                   <div class="col-12 list-item-description text-center">
+                                       125 000$
+                                   </div>
+                                   <div class="col-12 d-flex justify-content-center">
+                                       <button class="btn col-10 bg-prim text-white d-flex align-items-center justify-content-center mt-3">
+                                           <h6 class="mb-0 bn-btn-text">Buy now </h6> 
+                                           <div class="px-2 d-flex align-items-center bn-btn-text">
+                                               <i class="fa-solid fa-bag-shopping"></i>
+                                           </div>
+                                       </button>
+                                   </div>
+                                </div></a>
+                           </div>
+                           <div class="col-4 p-5 card">
+                            <a href="Car-page.html" class="no-hover">
+                               <div class="col-12 d-flex flex-column position-relative">
+                                   <div class=" sale-tag bg-3 position-absolute">
+                                       Sale
+                                   </div>
+                                   <div class="card-img">
+                                       <img src="../Sources/rim1.png" class="h-100" alt="">
+                                  </div>
+                                  <div class="col-12 list-item-title text-center mt-3 ">
+                                     Stellar RIM
+                                  </div>
+                                  <div class="col-12 list-item-description text-center">
+                                      1 000$
+                                  </div>
+                                  <div class="col-12 d-flex justify-content-center">
+                                      <button class="btn col-10 bg-prim text-white d-flex align-items-center justify-content-center mt-3">
+                                          <h6 class="mb-0 bn-btn-text">Buy now </h6> 
+                                          <div class="px-2 d-flex align-items-center bn-btn-text">
+                                              <i class="fa-solid fa-bag-shopping"></i>
+                                          </div>
+                                      </button>
+                                  </div>
+                               </div></a>
+                          </div>
+                          <div class="col-4 p-5 h-100 card"><a href="Car-page.html" class="no-hover">
+                           <div class="col-12 d-flex flex-column position-relative">
+                              <div class="card-img">
+                                  <img src="../Sources/porsche-model-macan3.png" class="h-100" alt="">
+                              </div>
+                              <div class="col-12 list-item-title text-center mt-3 ">
+                                 Cayenne
+                              </div>
+                              <div class="col-12 list-item-description text-center">
+                                  95 000$
+                              </div>
+                              <div class="col-12 d-flex justify-content-center">
+                                  <button class="btn col-10 bg-prim text-white d-flex align-items-center justify-content-center mt-3">
+                                      <h6 class="mb-0 bn-btn-text">Buy now </h6> 
+                                      <div class="px-2 d-flex align-items-center bn-btn-text">
+                                          <i class="fa-solid fa-bag-shopping"></i>
+                                      </div>
+                                  </button>
+                              </div>
+                           </div></a>
+                      </div>
+                      <div class="col-4 p-5 card"><a href="Car-page.html" class="no-hover">
+                       <div class="col-12 d-flex flex-column position-relative">
+                           <div class=" sale-tag bg-3 position-absolute">
+                               Sale
+                           </div>
+                           <div class="card-img">
+                               <img src="../Sources/rim2.png" class="h-100" alt="">
+                          </div>
+                          <div class="col-12 list-item-title text-center mt-3 ">
+                             Flower RIM
+                          </div>
+                          <div class="col-12 list-item-description text-center">
+                              1 000$
+                          </div>
+                          <div class="col-12 d-flex justify-content-center">
+                              <button class="btn col-10 bg-prim text-white d-flex align-items-center justify-content-center mt-3">
+                                  <h6 class="mb-0 bn-btn-text">Buy now </h6> 
+                                  <div class="px-2 d-flex align-items-center bn-btn-text">
+                                      <i class="fa-solid fa-bag-shopping"></i>
+                                  </div>
+                              </button>
+                          </div>
+                       </div></a>
+                       </div>
+                       <div class="col-4 p-5 h-100 card"><a href="Car-page.html" class="no-hover">
+                           <div class="col-12 d-flex flex-column position-relative">
+                              <div class="card-img">
+                                  <img src="../Sources/porsche-model-panamera2.png" class="h-100" alt="">
+                              </div>
+                              <div class="col-12 list-item-title text-center mt-3 ">
+                                 Panamera S
+                              </div>
+                              <div class="col-12 list-item-description text-center">
+                                  145 000$
+                              </div>
+                              <div class="col-12 d-flex justify-content-center">
+                                  <button class="btn col-10 bg-prim text-white d-flex align-items-center justify-content-center mt-3">
+                                      <h6 class="mb-0 bn-btn-text">Buy now </h6> 
+                                      <div class="px-2 d-flex align-items-center bn-btn-text">
+                                          <i class="fa-solid fa-bag-shopping"></i>
+                                      </div>
+                                  </button>
+                              </div>
+                           </div></a>
+                      </div>
+                      <div class="col-4 p-5 card"><a href="Car-page.html" class="no-hover">
+                       <div class="col-12 d-flex flex-column position-relative">
+                           <div class=" sale-tag bg-3 position-absolute">
+                               Sale
+                           </div>
+                           <div class="card-img">
+                               <img src="../Sources/d-wheel.png" class="h-100" alt="">
+                          </div>
+                          <div class="col-12 list-item-title text-center mt-3 ">
+                             Sport wheel
+                          </div>
+                          <div class="col-12 list-item-description text-center">
+                              500$
+                          </div>
+                          <div class="col-12 d-flex justify-content-center">
+                              <button class="btn col-10 bg-prim text-white d-flex align-items-center justify-content-center mt-3">
+                                  <h6 class="mb-0 bn-btn-text">Buy now </h6> 
+                                  <div class="px-2 d-flex align-items-center bn-btn-text">
+                                      <i class="fa-solid fa-bag-shopping"></i>
+                                  </div>
+                              </button>
+                          </div>
+                       </div></a>
+                       </div>
+                       <div class="col-4 p-5 card"><a href="Car-page.html" class="no-hover">
+                           <div class="col-12 d-flex flex-column position-relative">
+                               <div class=" sale-tag bg-3 position-absolute">
+                                   Sale
+                               </div>
+                               <div class="card-img">
+                                   <img src="../Sources/rim3.png" class="h-100" alt="">
+                              </div>
+                              <div class="col-12 list-item-title text-center mt-3 ">
+                                 Cosmic RIM
+                              </div>
+                              <div class="col-12 list-item-description text-center">
+                                  1 500$
+                              </div>
+                              <div class="col-12 d-flex justify-content-center">
+                                  <button class="btn col-10 bg-prim text-white d-flex align-items-center justify-content-center mt-3">
+                                      <h6 class="mb-0 bn-btn-text">Buy now </h6> 
+                                      <div class="px-2 d-flex align-items-center bn-btn-text">
+                                          <i class="fa-solid fa-bag-shopping"></i>
+                                      </div>
+                                  </button>
+                              </div>
+                           </div></a>
+                           </div>
+                           <div class="col-4 p-5 h-100 card"><a href="Car-page.html" class="no-hover">
+                               <div class="col-12 d-flex flex-column position-relative">
+                                  <div class="card-img">
+                                      <img src="../Sources/car-mirror2.png" class="h-100" alt="">
+                                  </div>
+                                  <div class="col-12 list-item-title text-center mt-3 ">
+                                     Mirror C672
+                                  </div>
+                                  <div class="col-12 list-item-description text-center">
+                                      200$
+                                  </div>
+                                  <div class="col-12 d-flex justify-content-center">
+                                      <button class="btn col-10 bg-prim text-white d-flex align-items-center justify-content-center mt-3">
+                                          <h6 class="mb-0 bn-btn-text">Buy now </h6> 
+                                          <div class="px-2 d-flex align-items-center bn-btn-text">
+                                              <i class="fa-solid fa-bag-shopping"></i>
+                                          </div>
+                                      </button>
+                                  </div>
+                               </div></a>
+                            </div>
+                            <div class="col-4 p-5 h-100 card"><a href="Car-page.html" class="no-hover">
+                               <div class="col-12 d-flex flex-column position-relative">
+                                  <div class="card-img">
+                                      <img src="../Sources/porsche-model-macan1.png" class="h-100" alt="">
+                                  </div>
+                                  <div class="col-12 list-item-title text-center mt-3 ">
+                                     Macan Turbo
+                                  </div>
+                                  <div class="col-12 list-item-description text-center">
+                                   75 000$
+                                  </div>
+                                  <div class="col-12 d-flex justify-content-center">
+                                      <button class="btn col-10 bg-prim text-white d-flex align-items-center justify-content-center mt-3">
+                                          <h6 class="mb-0 bn-btn-text">Buy now </h6> 
+                                          <div class="px-2 d-flex align-items-center bn-btn-text">
+                                              <i class="fa-solid fa-bag-shopping"></i>
+                                          </div>
+                                      </button>
+                                  </div>
+                               </div>
+                            </div></a>
+                        </div>
+                        <div class="col-12 text-dark mt-5 mb-5">
+                            Showing 1-30 of 157 entries
+                        </div>
+                        <div class="col-12 mb-5 d-flex flex-row justify-content-center">
+                            <div class="col-6 d-flex flex-row justify-content-center">
+                                <div class="col-1 bg-black text-white text-center pag-first">
+                                    <i class="fa-solid fa-chevron-left"></i>
+                                </div>
+                                <div class="col-1 bg-white text-center pag-active">
+                                    1
+                                </div>
+                                <div class="col-1 bg-black text-white text-center pag">
+                                    2
+                                </div>
+                                <div class="col-1 bg-black text-white text-center pag">
+                                    3
+                                </div>
+                                <div class="col-1 bg-black text-white text-center pag">
+                                    4
+                                </div>
+                                <div class="col-1 bg-black text-white text-center pag">
+                                    5
+                                </div>
+                                <div class="col-1 bg-black text-white text-center pag-end">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+            </div>
+        </div>
+    </div>
+    <div class="section col-12 bg-black">
+        <div class="section-header pt-4">
+            You Might Like
+        </div>
+        <div class="col-12 d-flex flex-row mt-5 mb-5 justify-content-center">
+            <div class="col-3 p-5 h-100 ">
+                <div class="col-12 d-flex flex-column position-relative">
+                   <div class="card-img">
+                       <img src="../Sources/porsche-model-panamera4.png" class="h-100" alt="">
+                   </div>
+                   <div class="col-12 list-item-title text-center mt-3 text-white ">
+                      Panamera S
+                   </div>
+                   <div class="col-12 list-item-description text-center">
+                       200 000$
+                   </div>
+                   <div class="col-12 d-flex justify-content-center">
+                       <button class="btn col-6 bg-white d-flex align-items-center justify-content-center mt-3">
+                           <h6 class="mb-0 bn-btn-text">Buy now </h6> 
+                           <div class="px-2 d-flex align-items-center bn-btn-text">
+                               <i class="fa-solid fa-bag-shopping"></i>
+                           </div>
+                       </button>
+                   </div>
+                </div>
+             </div>
+             <div class="col-3 p-5 h-100 ">
+                <div class="col-12 d-flex flex-column position-relative">
+                   <div class="card-img">
+                       <img src="../Sources/porsche-model-macan.png" class="h-100" alt="">
+                   </div>
+                   <div class="col-12 list-item-title text-center mt-3 text-white">
+                      Macan S
+                   </div>
+                   <div class="col-12 list-item-description text-center">
+                    60 000$
+                   </div>
+                   <div class="col-12 d-flex justify-content-center">
+                       <button class="btn col-6 bg-white  d-flex align-items-center justify-content-center mt-3">
+                           <h6 class="mb-0 bn-btn-text">Buy now </h6> 
+                           <div class="px-2 d-flex align-items-center bn-btn-text">
+                               <i class="fa-solid fa-bag-shopping"></i>
+                           </div>
+                       </button>
+                   </div>
+                </div>
+             </div>
+             <div class="col-3 p-5 h-100 ">
+                <div class="col-12 d-flex flex-column position-relative">
+                   <div class="card-img">
+                       <img src="../Sources/porsche-model-panamera3.png" class="h-100" alt="">
+                   </div>
+                   <div class="col-12 list-item-title text-center mt-3 text-white">
+                      Panamera Turbo
+                   </div>
+                   <div class="col-12 list-item-description text-center">
+                       125 000$
+                   </div>
+                   <div class="col-12 d-flex justify-content-center">
+                       <button class="btn col-6 bg-white d-flex align-items-center justify-content-center mt-3">
+                           <h6 class="mb-0 bn-btn-text">Buy now </h6> 
+                           <div class="px-2 d-flex align-items-center bn-btn-text">
+                               <i class="fa-solid fa-bag-shopping"></i>
+                           </div>
+                       </button>
+                   </div>
+                </div>
+           </div>
+        </div>
+    </div>
+    <div class="footer bg-prim">
+        <div class="col-12 d-flex flex-row justify-content-space-between mt-5 p-5">
+            <div class="logo col-3 p-5">
+                    <img src="../Sources/logo.png" class="footer-logo" alt="">
+            </div>
+            <div class="col-9 d-flex justify-content-end p-5">
+                <a href=""><i class="fa-brands fa-instagram footer-brand"></i></a>
+                <a href=""><i class="fab fa-facebook footer-brand"></i></a>
+                <a href=""><i class="fa-brands fa-youtube footer-brand"></i></a>
+                <a href=""><i class="fab fa-twitter footer-brand"></i></a>
+            </div>
+        </div>
+
+        <div class="col-12 d-flex flex-row justify-content-center mb-5">
+            <div class="col-2 d-flex flex-column">
+                <div class="footer-title">
+                    More about porsche
+                </div>
+                <div class="footer-item">
+                <a href="About-us.html">About us</a> 
+                </div>
+                <div class="footer-item">
+                   <a href="Constructor.html">Porsche constructor</a>
+                </div>
+                <div class="footer-item">
+                   <a href="Service.html">Porshe service</a>   
+                </div>
+            </div>
+            <div class="col-2 d-flex flex-column">
+                <div class="footer-title">
+                    Contact US
+                </div>
+                <div class="footer-item">
+                    Heavy street 41/5
+                </div>
+                <div class="footer-item">
+                    Contact suport 24/24
+                    <span class="highlight">+3714598756</span>
+                </div>
+            </div>
+            <div class="col-2 d-flex flex-column">
+                <div class="footer-title">
+                   <a href="#">Resources</a>   
+                </div>
+                <div class="footer-item">
+                    <a href="#">FAQ</a> 
+                </div>
+                <div class="footer-item">
+                    <a href="#"> Terms & Conditions</a> 
+                </div>
+                <div class="footer-item">
+                   <a href="#">Privacy Policy</a>   
+                </div>
+            </div>
+        </div>
+        <div class="col-12 d-flex flex-row justify-content-center highlight p-5 right align-items-center">
+            <i class="fas fa-copyright"></i>
+            Porsche, all rights reserved
+        </div> 
+    </div>
+</body>
+</html>
