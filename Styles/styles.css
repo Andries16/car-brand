@@ -1,4 +1,10 @@
 
+:root{
+    --bs-primary-rgb: 153, 107, 47;
+    --bs-primary: var(--bs-primary-rgb);
+}
+
+
 
 html{
     font-family:sans-serif;
@@ -60,12 +66,14 @@ body{
     align-self: center;
     margin-top: 30%;
     margin-left:10% ;
+    animation: enter 2s ease-out;
 }
 
 .banner-content{
     z-index: 500;
     align-self: center;
     margin-left:10% ;
+    animation: enter 2s ease-out;
 }
 
 .on-b{
@@ -422,6 +430,87 @@ a.no-hover:hover{
     border: 1px solid rgb(153, 107, 47);
     color: rgb(255, 255, 255) !important;
 }
+
+#video-maximize, #video-minimize{
+    overflow: hidden;    
+}
+
+#video-maximize:hover, #video-minimize:hover{
+    cursor: pointer;
+}
+
+#video-caption{
+    transition: all 1s ease-in-out;
+}
+
+#loading{
+    display: block;
+    top:0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    z-index: 20000;
+}
+.lds-facebook {
+    display: inline-block;
+    position: relative;
+    width: 160px;
+    height: 160px;
+  }
+  .lds-facebook div {
+    display: inline-block;
+    position: absolute;
+    left: 8px;
+    width: 16px;
+    height: 50px;
+    background: rgb(153, 107, 47);
+    animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+  }
+  .lds-facebook div:nth-child(1) {
+    left: 8px;
+    animation-delay: -0.24s;
+  }
+  .lds-facebook div:nth-child(2) {
+    left: 32px;
+    animation-delay: -0.12s;
+  }
+  .lds-facebook div:nth-child(3) {
+    left: 56px;
+    animation-delay: 0;
+  }
+  @keyframes lds-facebook {
+    0% {
+      top: 8px;
+      height: 64px;
+    }
+    50%, 100% {
+      top: 24px;
+      height: 32px;
+    }
+  }
+
+@keyframes glow {
+    from {
+      margin-left: -300px;
+      text-shadow: 0 0 20px rgb(153, 107, 47);
+    }
+    to {
+      margin-left: 0;
+      text-shadow: 0 0 30px rgb(97, 68, 27), 0 0 10px rgb(153, 107, 47);
+    }
+  }
+
+  @keyframes enter{
+    0%{ 
+        opacity: 0;
+        margin-left:8%;
+      }
+      100% {
+        margin-left:10% ;
+      }
+  }
 @media (min-width:768px){
     .container{
         width:750px
@@ -443,7 +532,17 @@ a.no-hover:hover{
         justify-content: flex-start;
      }
      .title{
-        font-size: 2rem;
+        font-size: 2rem !important;
+    }
+    .slide-content{
+        margin: 0;
+        padding-top: 20%;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .mx-5{
+        margin: 0 !important;
+        padding-left: 8rem;
     }
      
 }
@@ -451,6 +550,45 @@ a.no-hover:hover{
     .p-6{
         padding: 0;
         padding-top: 200px;
+    }
+    .slide-content{
+        margin: 0;
+        padding-top: 20%;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
+@media(max-width:600px){
+    .card-header, .title,.service-icon,.email{
+        font-size: 1rem !important;
+    }
+    .subtitle,.btn, .price{
+        font-size: 0.7rem !important;
+    }
+    .slide-content, .banner-content{
+        padding-top: 30%;
+    }   
+    .mx-5{
+        margin: 0 !important;
+        padding-left: 8rem;
+    }
+}
+@media(max-width:1500px){
+    .title{
+      font-size: 3rem ;
+    }
+    .slide-img{
+        display: none;
+    }
+    .services{
+        position: static !important;
+    }
+}
+
+@media(max-width:1600){
+    .slide-img{
+        display: none !important;
     }
 }
 @media (min-width:992px){

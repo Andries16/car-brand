@@ -10,47 +10,80 @@
     <link rel="stylesheet" href="../Styles/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" href="../Sources/logo-color.png">
+    <script src="../Scripts/script.js"></script>
     <title>Porsche</title>
 </head>
 <body class="bg-prim d-flex flex-column">
+    <div id="loading">
+        <div class="h-100 w-100 d-flex justify-content-center align-items-center">
+            <div class="lds-facebook">
+                <div></div><div></div><div></div>
+             </div>
+        </div>
+    </div>
     <div class="nav w-100 d-flex flex-row justify-content-evenly align-items-center text-white">
-        <div class="col-3 m-2">
-            <a href="#">
-              <img src="../Sources/logo-white.png" class="w-25" alt="">
+        <div class="col-3 m-2 h-100 d-flex align-items-center">
+            <a href="Home.html">
+              <img src="../Sources/logo-white.png" class="col-md-3 col-7" alt="">
             </a> 
           </div>
-        <div class="col-6 d-flex flex-row">
+          <div class="h-100 d-flex align-items-center">
+            <button class="btn bg-transparent d-lg-none d-block text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapsenav" aria-expanded="false" aria-controls="collapsenav">
+                <i class="fa-solid fa-bars"></i>
+              </button>
+          </div>
+        <div class="container-fluid col-6 d-lg-flex d-none flex-row justify-content-center"  >
             <div class="col-9 d-flex flex-row justify-content-end">
                 <div class="col-3 capitalize"><a href="#" class="nav-active">HOME</a></div>
-                <div class="col-3 capitalize"><a href="Shop.html">SHOP</a></div>
+                <div class="col-3 capitalize"><a href="Shop.html" >SHOP</a></div>
                 <div class="col-3 capitalize"><a href="About-us.html">ABOUT US</a></div>
-                <div class="col-3 capitalize"><a href="Contact-us.html">CONTACT</a></div>
-            </div>
-            <div class="col-3 on-b">
-               <a href="Order-now.html" class="no-hover">Order Now</a> 
+                <div class="col-3 capitalize"><a href="Contact-us.html" >CONTACT</a></div>
+                <div class="col-3 on-b">
+                    <a href="Order-now.html" class="no-hover">Order Now</a> 
+                 </div>
             </div>
         </div>
+        <div class="collapse col-12" id="collapsenav">
+            <div class="card col-12 card-body bg-black d-flex justify-content-center align-content-center">
+                <div class="col-12 on-b"><a href="#" class="nav-active">HOME</a></div>
+                <div class="col-12 on-b capitalize"><a href="Shop.html" >SHOP</a></div>
+                <div class="col-12 on-b capitalize"><a href="About-us.html">ABOUT US</a></div>
+                <div class="col-12 on-b capitalize"><a href="Contact-us.html" >CONTACT</a></div>
+                <div class="col-12">
+                    <div class="on-b">
+                    <a href="Order-now.html" class="no-hover">Order Now</a> 
+                 </div>
+                </div>
+            </div>
+          </div>
     </div>
     <div class="section">
     <div class="col-12 position-relative d-flex">
         <img src="../Sources/984632.jpg" class="w-100 slide img-dark" alt="">
-        <div class="col-5 h-100 position-absolute slide-content d-flex flex-column">
-                <div class="col-12 text-white title capitalize">
+        <div class="col-xxl-5 col-lg-10 col-12 h-100 position-absolute slide-content d-flex flex-column">
+                <div class="col-12 text-white title capitalize text-nowrap">
                     NEW MODEL PORSCHE 911
                 </div>
-                <div class="subtitle col-6 text-white">
+                <div class="subtitle col-xxl-6 col-12 text-white">
                     The new re-designed porche 911 V8 captures the essence of the sport range and utility, distiling and bringing together every attribute in perfect balance. 
                 </div>
-                <div class="col-6 mt-3">
-                    <button class="btn bg-sec">ORDER NOW</button>
+                <div class="col-6 d-none d-xxl-block mt-3">
+                    <button class="btn bg-sec"><a href="Order-now.html" class="no-hover">ORDER NOW</a></button>
                 </div>
-                <div class="col-6 mt-3 d-flex flex-row">
-                    <img src="../Sources/porsche_911_gt3_70_years_porsche_australia_edition_2021_4k_5-3840x2160.jpg" class="w-100" alt="">
-                    <div class="h-100 bg-dark col-1 d-flex align-items-center justify-content-center">
+                <div class="col-6 mt-3 flex-row d-none d-xxl-flex slide-img" id="video-caption">
+                    <video class="w-100" height="auto" playsinline autoplay muted loop>
+                        <source src="../Sources/Y2Mate.is - Porsche 992 Turbo S on Vossen's [4K]-m4Nia-v4fVs-1080p-1654800787211.mp4" type="video/mp4" />
+                      </video>
+                    <div class="h-100 bg-dark col-1 d-flex align-items-center justify-content-center" id="video-maximize">
                      <div class="text-white">
                         <i class="fa-solid fa-caret-right"></i>
                      </div>
                     </div>
+                    <div class="h-100 bg-dark  d-flex align-items-center col-1 d-none justify-content-center" id="video-minimize">
+                        <div class="text-white">
+                           <i class="fa-solid fa-caret-left"></i>
+                        </div>
+                       </div>
                 </div>
         </div>
     </div>
@@ -65,10 +98,10 @@
                     <img src="../Sources/2020-porsche-taycan.jpg" class="w-100 img-dark" alt="">
                     <div class="d-flex flex-column justify-content-start card-img-overlay text-white m-2">
                         <div class="card-header">Taycan</div>
-                        <div>81,900.00 EUR</div>
+                        <div class="price"> 81,900.00 EUR</div>
                     </div>
                     <div class="d-flex flex-row m-2 card-img-bottom-overlay">
-                        <button class="btn bg-sec m-2">Configure</button>
+                        <button class="btn bg-sec m-2"><a href="Shop.html" class="no-hover">Configure</a></button>
                         <button class="btn on-b text-white m-2"><a href="Car-page.html" class="no-hover"> View</a></button>
                     </div>
                 </div>
@@ -79,10 +112,10 @@
                     <img src="../Sources/Porsche 911 PO web.webp" class="w-100 h-100 img-dark" alt="">
                     <div class="d-flex flex-column justify-content-start card-img-overlay text-white m-2">
                         <div class="card-header">911</div>
-                        <div>96,920.00 EUR</div>
+                        <div  class="price">96,920.00 EUR</div>
                     </div>
                     <div class="d-flex flex-row m-2 card-img-bottom-overlay">
-                        <button class="btn bg-sec m-2">Configure</button>
+                        <button class="btn bg-sec m-2"><a href="Shop.html" class="no-hover">Configure</a></button>
                         <button class="btn on-b text-white m-2"><a href="Car-page.html" class="no-hover"> View</a></button>
                     </div>
                 </div>
@@ -93,10 +126,10 @@
                     <img src="../Sources/porsche-cayenne-turbo-gt-2021.jpg" class="w-100 img-dark" alt="">
                     <div class="d-flex flex-column justify-content-start card-img-overlay text-white m-2">
                         <div class="card-header">Cayenne</div>
-                        <div>81,200.00 EUR</div>
+                        <div  class="price">81,200.00 EUR</div>
                     </div>
                     <div class="d-flex flex-row m-2 card-img-bottom-overlay">
-                        <button class="btn bg-sec m-2">Configure</button>
+                        <button class="btn bg-sec m-2"><a href="Shop.html" class="no-hover">Configure</a></button>
                         <button class="btn on-b text-white m-2"><a href="Car-page.html" class="no-hover"> View</a></button>
                     </div>
                 </div>
@@ -107,10 +140,10 @@
                     <img src="../Sources/rp_-_porsche_718_boxster_spyder-19_0.jpg" class="w-100 img-dark" alt="">
                     <div class="d-flex flex-column justify-content-start card-img-overlay text-white m-2">
                         <div class="card-header">718</div>
-                        <div>108,400.00 EUR</div>
+                        <div   class="price">108,400.00 EUR</div>
                     </div>
                     <div class="d-flex flex-row m-2 card-img-bottom-overlay">
-                        <button class="btn bg-sec m-2">Configure</button>
+                        <button class="btn bg-sec m-2"><a href="Shop.html" class="no-hover">Configure</a></button>
                         <button class="btn on-b text-white m-2">  <a href="Car-page.html" class="no-hover"> View</a></button>
                     </div>
                 </div>
@@ -121,38 +154,38 @@
         <div class="section-header w-100 bg-prim">
            Cars in Stock
         </div>
-        <div class="col-12 d-flex flex-wrap flex-row mb-5 px-6">
-                <div class="col-4">
+        <div class="col-12 d-flex flex-wrap flex-row mb-5 container">
+                <div class="col-lg-4 col-md-6 col-12">
                     <img src="../Sources/porsche-model-taycan.png" class="w-100" alt="">
                     <div class="w-100 card-footer-text">
                         <a href="Shop.html" >Show all Taycan models</a>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-lg-4 col-md-6 col-12">
                     <img src="../Sources/porsche-model-718.png" class="w-100" alt="">
                     <div class="w-100 card-footer-text">
                         <a href="Shop.html" >Show all 718 models</a>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-lg-4 col-md-6 col-12">
                     <img src="../Sources/porsche-model-911.png" class="w-100" alt="">
                     <div class="w-100 card-footer-text">
                         <a href="Shop.html" >Show all 911 models</a>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-lg-4 col-md-6 col-12">
                     <img src="../Sources/porsche-model-macan.png" class="w-100" alt="">
                     <div class="w-100 card-footer-text">
                         <a href="Shop.html" >Show all Macan models</a>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-lg-4 col-md-6 col-12">
                     <img src="../Sources/porsche-model-panamera.png" class="w-100" alt="">
                     <div class="w-100 card-footer-text">
                         <a href="Shop.html" >Show all Panamera models</a>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-lg-4 col-md-6 col-12">
                     <img src="../Sources/porsche-model-cayenne.png" class="w-100" alt="">
                     <div class="w-100 card-footer-text">
                         <a href="Shop.html" >Show all Cayenne models</a>
@@ -164,28 +197,28 @@
         <div class="section-header mt-5">
             Our services
         </div>
-        <div class="d-flex flex-row mt-5 justify-content-center col-12">
-            <div class="col-2 os-item position-relative m-3">
+        <div class="d-flex flex-row mt-5 flex-wrap justify-content-center col-12">
+            <div class="col-lg-2 col-md-4 col-9 os-item position-relative m-3">
                     <img src="../Sources/car-service-hero.jpg" class="h-100 img-dark" alt="">
                     <div class="w-100 position-absolute card-footer">
                         Service
                     </div>
             </div>
-            <div class="col-2 os-item position-relative m-3">
+            <div class="col-lg-2 col-md-4 col-9 os-item position-relative m-3">
                 <img src="../Sources/many-cars-ford-porsche-bmw-audi-toyota-wallpaper-preview.jpg" class="h-100 img-dark" alt="">
                 <div class="w-100 position-absolute card-footer">
                     Compare
                 </div>
             </div>
-            <div class="col-2 os-item position-relative m-3">
-                <img src="../Sources/download.jpeg" class="h-100 img-dark" alt="">
+            <div class="col-lg-2 col-md-4 col-9 os-item position-relative m-3">
+                <img src="../Sources/download.jpeg" class="h-100 w-100 img-dark" alt="">
                 <div class="w-100 position-absolute card-footer">
                     Center
                 </div>
             </div>
         </div>
     </div>
-    <div class="footer">
+    <div class="footer bg-prim">
         <div class="col-12 d-flex flex-row justify-content-space-between mt-5 p-5">
             <div class="logo col-3 p-5">
                     <img src="../Sources/logo.png" class="footer-logo" alt="">
@@ -198,8 +231,8 @@
             </div>
         </div>
 
-        <div class="col-12 d-flex flex-row justify-content-center mb-5">
-            <div class="col-2 d-flex flex-column">
+        <div class="col-12 d-flex flex-md-row flex-column mx-5 mx-md-0 flex-wrap justify-content-center mb-5">
+            <div class="col-md-2 col-6 my-3 d-flex flex-column">
                 <div class="footer-title">
                     More about porsche
                 </div>
@@ -213,7 +246,7 @@
                    <a href="Service.html">Porshe service</a>   
                 </div>
             </div>
-            <div class="col-2 d-flex flex-column">
+            <div class="col-md-2 col-6 my-3 d-flex flex-column">
                 <div class="footer-title">
                     Contact US
                 </div>
@@ -222,21 +255,22 @@
                 </div>
                 <div class="footer-item">
                     Contact suport 24/24
-                    <span class="highlight">+3714598756</span>
+                    <span class="highlight">
+                        <a href="tel:+3714598756">+3714598756</a></span>
                 </div>
             </div>
-            <div class="col-2 d-flex flex-column">
+            <div class="col-md-2 col-6 my-3  d-flex flex-column">
                 <div class="footer-title">
-                   <a href="#">Resources</a>   
+                   Resources   
                 </div>
                 <div class="footer-item">
-                    <a href="#">FAQ</a> 
+                    <a href="../Sources/The models.pdf" target="_blank">FAQ</a> 
                 </div>
                 <div class="footer-item">
-                    <a href="#"> Terms & Conditions</a> 
+                    <a href="../Sources/Cookies Policy.docx" download> Terms & Conditions</a> 
                 </div>
                 <div class="footer-item">
-                   <a href="#">Privacy Policy</a>   
+                   <a href="../Sources/Privacy Policy.docx" download>Privacy Policy</a>   
                 </div>
             </div>
         </div>
@@ -245,5 +279,20 @@
             Porsche, all rights reserved
         </div> 
     </div>
+
+    <script>
+        document.getElementById('video-maximize').addEventListener("click",()=>{
+            let vid = document.getElementById('video-caption');
+            vid.style.width="100%";
+            document.getElementById('video-maximize').classList.add('d-none');
+            document.getElementById('video-minimize').classList.remove('d-none');
+        })
+        document.getElementById('video-minimize').addEventListener("click",()=>{
+            let vid = document.getElementById('video-caption');
+            vid.style.width="50%";
+            document.getElementById('video-maximize').classList.remove('d-none');
+            document.getElementById('video-minimize').classList.add('d-none');
+        })
+    </script>
 </body>
 </html>

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../Styles/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" href="../Sources/logo-color.png">
+    <script src="../Scripts/script.js"></script>
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
       defer
@@ -17,28 +18,56 @@
     <title>Porsche</title>
 </head>
 <body class="bg-prim d-flex flex-column">
+    <div id="loading">
+        <div class="h-100 w-100 d-flex justify-content-center align-items-center">
+            <div class="lds-facebook">
+                <div></div><div></div><div></div>
+             </div>
+        </div>
+    </div>
     <div class="nav w-100 d-flex flex-row justify-content-evenly align-items-center text-white">
-        <div class="col-3 m-2">
+        <div class="col-3 m-2 h-100 d-flex align-items-center">
             <a href="Home.html">
-              <img src="../Sources/logo-white.png" class="w-25" alt="">
+              <img src="../Sources/logo-white.png" class="col-md-3 col-7" alt="">
             </a> 
           </div>
-        <div class="col-6 d-flex flex-row">
+          <div class="h-100 d-flex align-items-center">
+            <button class="btn bg-transparent d-lg-none d-block text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapsenav" aria-expanded="false" aria-controls="collapsenav">
+                <i class="fa-solid fa-bars"></i>
+              </button>
+          </div>
+        <div class="container-fluid col-6 d-lg-flex d-none flex-row justify-content-center"  >
             <div class="col-9 d-flex flex-row justify-content-end">
                 <div class="col-3 capitalize"><a href="Home.html">HOME</a></div>
                 <div class="col-3 capitalize"><a href="Shop.html" >SHOP</a></div>
                 <div class="col-3 capitalize"><a href="About-us.html">ABOUT US</a></div>
                 <div class="col-3 capitalize"><a href="#" class="nav-active">CONTACT</a></div>
-            </div>
-            <div class="col-3 on-b">
-               <a href="Order-now.html" class="no-hover">Order Now</a> 
+                <div class="col-3 on-b">
+                    <a href="Order-now.html" class="no-hover">Order Now</a> 
+                 </div>
             </div>
         </div>
+        <div class="collapse col-12" id="collapsenav">
+            <div class="card col-12 card-body bg-black d-flex justify-content-center align-content-center">
+                <div class="col-12 on-b"><a href="Home.html">HOME</a></div>
+                <div class="col-12 on-b capitalize"><a href="Shop.html" >SHOP</a></div>
+                <div class="col-12 on-b capitalize"><a href="About-us.html">ABOUT US</a></div>
+                <div class="col-12 on-b capitalize"><a href="#" class="nav-active">CONTACT</a></div>
+                <div class="col-12">
+                    <div class="on-b">
+                    <a href="Order-now.html" class="no-hover">Order Now</a> 
+                 </div>
+                </div>
+            </div>
+          </div>
     </div>
+   
     <div class="section">
         <div class="col-12 position-relative d-flex">
-            <img src="../Sources/banner2.jpg" class="w-100 overflow-hidden banner slide img-dark" alt="">
-            <div class="col-10 position-absolute d-flex justify-content-center banner-content ">
+            <video class="w-100" height="auto" playsinline autoplay muted loop>
+                <source src="../Sources/Y2Mate.is - Porsche 992 GT3 Touring  Night Vibes 4K-da5x-__kvGY-1080p-1654266770564.mp4" type="video/mp4" />
+              </video>
+            <div class="col-10 h-100 position-absolute d-flex justify-content-center banner-content align-items-end ">
                     <div class="col-12 text-white title capitalize text-center">
                         CONTACT US
                     </div>
@@ -51,8 +80,8 @@
         </div>
     </div>
     <div class="section container bg-black mt-5 mb-5">
-        <div class="col-12 mt-5 d-flex flex-row">
-            <div class="col-6 pe-5">
+        <div class="col-12 mt-5 d-flex flex-row flex-wrap">
+            <div class="col-lg-6 col-12 pe-lg-5">
                 <h1 class="text-white pb-5">Get in touch with us</h1>
                 <h5 class="text-white pb-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type </h4>
                 <div class="col-12 d-flex flex-column">
@@ -70,7 +99,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-6 ps-5">
+            <div class="col-lg-6 col-12 ps-lg-5 mt-5 mt-lg-0">
                 <form action="">
                     <div class="col-12 mb-5">
                         <input type="text" class="col-12 contact-input" placeholder="YOUR NAME">
@@ -88,10 +117,10 @@
     </div>
     <div class="section p-5 bg-dark">
         <div class="col-12 d-flex flex row justify-content-center">
-            <h1 class=" col-6 text-center text-white">PORSCHE.CONTACT@GMAIL.COM</h1>
+            <h1 class=" col-lg-6 col-12 text-center text-white email">PORSCHE.CONTACT@GMAIL.COM</h1>
         </div>
     </div>
-    <div class="footer">
+    <div class="footer bg-prim">
         <div class="col-12 d-flex flex-row justify-content-space-between mt-5 p-5">
             <div class="logo col-3 p-5">
                     <img src="../Sources/logo.png" class="footer-logo" alt="">
@@ -103,8 +132,9 @@
                 <a href=""><i class="fab fa-twitter footer-brand"></i></a>
             </div>
         </div>
-        <div class="col-12 d-flex flex-row justify-content-center mb-5">
-            <div class="col-2 d-flex flex-column">
+
+        <div class="col-12 d-flex flex-md-row flex-column mx-5 mx-md-0 flex-wrap justify-content-center mb-5">
+            <div class="col-md-2 col-6 my-3 d-flex flex-column">
                 <div class="footer-title">
                     More about porsche
                 </div>
@@ -118,7 +148,7 @@
                    <a href="Service.html">Porshe service</a>   
                 </div>
             </div>
-            <div class="col-2 d-flex flex-column">
+            <div class="col-md-2 col-6 my-3 d-flex flex-column">
                 <div class="footer-title">
                     Contact US
                 </div>
@@ -127,21 +157,21 @@
                 </div>
                 <div class="footer-item">
                     Contact suport 24/24
-                    <span class="highlight">+3714598756</span>
+                    <span class="highlight"><a href="tel:+3714598756">+3714598756</a></span>
                 </div>
             </div>
-            <div class="col-2 d-flex flex-column">
+            <div class="col-md-2 col-6 my-3  d-flex flex-column">
                 <div class="footer-title">
-                   <a href="#">Resources</a>   
+                   Resources   
                 </div>
                 <div class="footer-item">
-                    <a href="#">FAQ</a> 
+                    <a href="../Sources/The models.pdf" target="_blank">FAQ</a> 
                 </div>
                 <div class="footer-item">
-                    <a href="#"> Terms & Conditions</a> 
+                    <a href="../Sources/Cookies Policy.docx" download> Terms & Conditions</a> 
                 </div>
                 <div class="footer-item">
-                   <a href="#">Privacy Policy</a>   
+                   <a href="../Sources/Privacy Policy.docx" download>Privacy Policy</a>   
                 </div>
             </div>
         </div>

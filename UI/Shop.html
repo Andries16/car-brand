@@ -10,26 +10,52 @@
     <link rel="stylesheet" href="../Styles/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" href="../Sources/logo-color.png">
+    <script src="../Scripts/script.js"></script>
     <title>Porsche</title>
 </head>
 <body class="bg-sec d-flex flex-column">
+    <div id="loading">
+        <div class="h-100 w-100 d-flex justify-content-center align-items-center">
+            <div class="lds-facebook">
+                <div></div><div></div><div></div>
+             </div>
+        </div>
+    </div>
     <div class="nav w-100 d-flex flex-row justify-content-evenly align-items-center text-white">
-        <div class="col-3 m-2">
+        <div class="col-3 m-2 h-100 d-flex align-items-center">
             <a href="Home.html">
-              <img src="../Sources/logo-white.png" class="w-25" alt="">
+              <img src="../Sources/logo-white.png" class="col-md-3 col-7" alt="">
             </a> 
           </div>
-        <div class="col-6 d-flex flex-row">
+          <div class="h-100 d-flex align-items-center">
+            <button class="btn bg-transparent d-lg-none d-block text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapsenav" aria-expanded="false" aria-controls="collapsenav">
+                <i class="fa-solid fa-bars"></i>
+              </button>
+          </div>
+        <div class="container-fluid col-6 d-lg-flex d-none flex-row justify-content-center"  >
             <div class="col-9 d-flex flex-row justify-content-end">
                 <div class="col-3 capitalize"><a href="Home.html">HOME</a></div>
                 <div class="col-3 capitalize"><a href="#" class="nav-active">SHOP</a></div>
                 <div class="col-3 capitalize"><a href="About-us.html">ABOUT US</a></div>
                 <div class="col-3 capitalize"><a href="Contact-us.html">CONTACT</a></div>
-            </div>
-            <div class="col-3 on-b">
-               <a href="Order-now.html" class="no-hover">Order Now</a> 
+                <div class="col-3 on-b">
+                    <a href="Order-now.html" class="no-hover">Order Now</a> 
+                 </div>
             </div>
         </div>
+        <div class="collapse col-12" id="collapsenav">
+            <div class="card col-12 card-body bg-black d-flex justify-content-center align-content-center">
+                <div class="col-12 on-b"><a href="Home.html">HOME</a></div>
+                <div class="col-12 on-b capitalize"><a href="#" class="nav-active">SHOP</a></div>
+                <div class="col-12 on-b capitalize"><a href="About-us.html">ABOUT US</a></div>
+                <div class="col-12 on-b capitalize"><a href="Contact-us.html" >CONTACT</a></div>
+                <div class="col-12">
+                    <div class="on-b">
+                    <a href="Order-now.html" class="no-hover">Order Now</a> 
+                 </div>
+                </div>
+            </div>
+          </div>
     </div>
     <div class="section">
         <div class="col-12 position-relative d-flex">
@@ -38,17 +64,17 @@
                     <div class="col-12 text-white title capitalize">
                         New product are now available
                     </div>
-                    <div class="col-6 mt-3">
-                        <button class="btn bg-sec">SHOP NOW</button>
+                    <div class="col-6 mt-3  d-md-block d-none">
+                        <button class="btn bg-sec"><a href="#shop-content" class="no-hover">SHOP NOW</a></button>
                     </div>
             </div>
         </div>
     </div>
     <div class="section">
-        <div class="section-header w-100 bg-prim">
+        <div class="section-header w-100 bg-prim " id="shop-content">
            SHOP
         </div>
-        <div class="container col-12">
+        <div class="container col-12" >
             <div class="row mt-5 mb-5">
                 <div class="col-md-5 w-100">
                     <div class="input-group w-100">
@@ -62,8 +88,8 @@
                 </div>
             </div>
 
-            <div class="col-12 mt-5 d-flex flex-row">
-                    <div class="col-3">
+            <div class="col-12 mt-5 d-flex flex-row flex-wrap">
+                    <div class="col-md-3 col-12">
                         <div class="col-10 list-group-1">
                             <div class="list-title">Categories</div>
                             <div class="list-item w-100"><a href="#">All categories</a></div>
@@ -95,6 +121,7 @@
                             <div class="list-title pl-1">Best sellers</div>
                             <div class="col-12 mt-5 mb-4 d-flex flex-column justify-content-center">
                                 <div class="col-12 d-flex flex-row mb-3">
+                                    <a href="Car-page.html" class="no-hover  d-flex flex-row">
                                     <div class="col-6 ">
                                         <img src="../Sources/porsche-model-718.png" class="w-100" alt="">
                                     </div>
@@ -102,8 +129,10 @@
                                         <div class="list-item-title">718 S</div>
                                         <div class="list-item-description">130 000$ </div>
                                     </div>
+                                </a>
                                 </div>
                                 <div class="col-12 d-flex flex-row mb-3">
+                                    <a href="Car-page.html" class="no-hover d-flex flex-row">
                                     <div class="col-6 overflow-hidden">
                                         <img src="../Sources/porsche-model-911.png" class="w-100" alt="">
                                     </div>
@@ -111,8 +140,10 @@
                                         <div class="list-item-title">911 Turbo</div>
                                         <div class="list-item-description">130 000$ </div>
                                     </div>
+                                    </a>
                                 </div>
                                 <div class="col-12 d-flex flex-row mb-3">
+                                    <a href="Car-page.html" class="no-hover d-flex flex-row">
                                     <div class="col-6 overflow-hidden">
                                         <img src="../Sources/porsche-model-panamera.png" class="w-100" alt="">
                                     </div>
@@ -120,8 +151,10 @@
                                         <div class="list-item-title">Panamera S</div>
                                         <div class="list-item-description">130 000$ </div>
                                     </div>
+                                    </a>
                                 </div>
                                 <div class="col-12 d-flex flex-row mb-3">
+                                    <a href="Car-page.html" class="no-hover d-flex flex-row">
                                     <div class="col-6 overflow-hidden">
                                         <img src="../Sources/porsche-model-macan.png" class="w-100" alt="">
                                     </div>
@@ -129,13 +162,14 @@
                                         <div class="list-item-title">Macan S</div>
                                         <div class="list-item-description">130 000$ </div>
                                     </div>
+                                    </a>
                                 </div>
                                 
                             </div>
                         </div>
                        
                     </div>
-                    <div class="col-9">
+                    <div class="col-md-9 col-12">
                         <div class="col-12 d-flex flex-row justify-content-between align-content-center">
                             <div class="col-2 d-flex flex-row align-content-center">
                                 <div class="col-3 d-flex align-items-center">
@@ -163,7 +197,7 @@
                             </div>
                         </div>
                         <div class="col-12 d-flex flexRow justify-content-start flex-wrap">
-                            <div class="col-4 p-5 h-100 card">
+                            <div class="col-lg-4 col-md-6 col-12 p-5 h-100 card">
                                 <a href="Car-page.html" class="no-hover">
                                  <div class="col-12 d-flex flex-column position-relative">
                                     <div class="card-img">
@@ -186,7 +220,7 @@
                                  </div>
                                  </a>   
                             </div>
-                            <div class="col-4 p-5 card">
+                            <div class="col-lg-4 col-md-6 col-12 p-5 card">
                                 <a href="Car-page.html" class="no-hover">
                                 <div class="col-12 d-flex flex-column position-relative">
                                     <div class=" sale-tag bg-3 position-absolute">
@@ -212,7 +246,7 @@
                                 </div>
                             </a>  
                            </div>
-                           <div class="col-4 p-5 h-100 card">
+                           <div class="col-lg-4 col-md-6 col-12 p-5 h-100 card">
                             <a href="Car-page.html" class="no-hover">
                             <div class="col-12 d-flex flex-column position-relative">
                                <div class="card-img">
@@ -234,7 +268,7 @@
                                </div>
                             </div></a>
                        </div>
-                       <div class="col-4 p-5 card">
+                       <div class="col-lg-4 col-md-6 col-12 p-5 card">
                         <a href="Car-page.html" class="no-hover">
                         <div class="col-12 d-flex flex-column position-relative">
                             <div class=" sale-tag bg-3 position-absolute">
@@ -259,7 +293,7 @@
                            </div>
                         </div></a>
                         </div>
-                        <div class="col-4 p-5 h-100 card">
+                        <div class="col-lg-4 col-md-6 col-12 p-5 h-100 card">
                             <a href="Car-page.html" class="no-hover">
                             <div class="col-12 d-flex flex-column position-relative">
                                <div class="card-img">
@@ -281,7 +315,7 @@
                                </div>
                             </div></a>
                        </div>
-                       <div class="col-4 p-5 card">
+                       <div class="col-lg-4 col-md-6 col-12 p-5 card">
                         <a href="Car-page.html" class="no-hover">
                         <div class="col-12 d-flex flex-column position-relative">
                             <div class=" sale-tag bg-3 position-absolute">
@@ -306,7 +340,7 @@
                            </div>
                         </div></a>
                         </div>
-                        <div class="col-4 p-5 card">
+                        <div class="col-lg-4 col-md-6 col-12 p-5 card">
                             <a href="Car-page.html" class="no-hover">
                             <div class="col-12 d-flex flex-column position-relative">
                                 <div class=" sale-tag bg-3 position-absolute">
@@ -331,7 +365,7 @@
                                </div>
                             </div></a>
                             </div>
-                            <div class="col-4 p-5 h-100 card">
+                            <div class="col-lg-4 col-md-6 col-12 p-5 h-100 card">
                                 <a href="Car-page.html" class="no-hover">
                                 <div class="col-12 d-flex flex-column position-relative">
                                    <div class="card-img">
@@ -353,7 +387,7 @@
                                    </div>
                                 </div></a>
                              </div>
-                             <div class="col-4 p-5 h-100 card">
+                             <div class="col-lg-4 col-md-6 col-12 p-5 h-100 card">
                                 <a href="Car-page.html" class="no-hover">
                                 <div class="col-12 d-flex flex-column position-relative">
                                    <div class="card-img">
@@ -375,7 +409,7 @@
                                    </div>
                                 </div></a>
                              </div>
-                             <div class="col-4 p-5 h-100 card">
+                             <div class="col-lg-4 col-md-6 col-12 p-5 h-100 card">
                                 <a href="Car-page.html" class="no-hover">
                                 <div class="col-12 d-flex flex-column position-relative">
                                    <div class="card-img">
@@ -397,7 +431,7 @@
                                    </div>
                                 </div></a>
                            </div>
-                           <div class="col-4 p-5 card">
+                           <div class="col-lg-4 col-md-6 col-12 p-5 card">
                             <a href="Car-page.html" class="no-hover">
                                <div class="col-12 d-flex flex-column position-relative">
                                    <div class=" sale-tag bg-3 position-absolute">
@@ -422,7 +456,7 @@
                                   </div>
                                </div></a>
                           </div>
-                          <div class="col-4 p-5 h-100 card"><a href="Car-page.html" class="no-hover">
+                          <div class="col-lg-4 col-md-6 col-12 p-5 h-100 card"><a href="Car-page.html" class="no-hover">
                            <div class="col-12 d-flex flex-column position-relative">
                               <div class="card-img">
                                   <img src="../Sources/porsche-model-macan3.png" class="h-100" alt="">
@@ -443,7 +477,7 @@
                               </div>
                            </div></a>
                       </div>
-                      <div class="col-4 p-5 card"><a href="Car-page.html" class="no-hover">
+                      <div class="col-lg-4 col-md-6 col-12 p-5 card"><a href="Car-page.html" class="no-hover">
                        <div class="col-12 d-flex flex-column position-relative">
                            <div class=" sale-tag bg-3 position-absolute">
                                Sale
@@ -467,7 +501,7 @@
                           </div>
                        </div></a>
                        </div>
-                       <div class="col-4 p-5 h-100 card"><a href="Car-page.html" class="no-hover">
+                       <div class="col-lg-4 col-md-6 col-12 p-5 h-100 card"><a href="Car-page.html" class="no-hover">
                            <div class="col-12 d-flex flex-column position-relative">
                               <div class="card-img">
                                   <img src="../Sources/porsche-model-panamera2.png" class="h-100" alt="">
@@ -488,7 +522,7 @@
                               </div>
                            </div></a>
                       </div>
-                      <div class="col-4 p-5 card"><a href="Car-page.html" class="no-hover">
+                      <div class="col-lg-4 col-md-6 col-12 p-5 card"><a href="Car-page.html" class="no-hover">
                        <div class="col-12 d-flex flex-column position-relative">
                            <div class=" sale-tag bg-3 position-absolute">
                                Sale
@@ -512,7 +546,7 @@
                           </div>
                        </div></a>
                        </div>
-                       <div class="col-4 p-5 card"><a href="Car-page.html" class="no-hover">
+                       <div class="col-lg-4 col-md-6 col-12 p-5 card"><a href="Car-page.html" class="no-hover">
                            <div class="col-12 d-flex flex-column position-relative">
                                <div class=" sale-tag bg-3 position-absolute">
                                    Sale
@@ -536,7 +570,7 @@
                               </div>
                            </div></a>
                            </div>
-                           <div class="col-4 p-5 h-100 card"><a href="Car-page.html" class="no-hover">
+                           <div class="col-lg-4 col-md-6 col-12 p-5 h-100 card"><a href="Car-page.html" class="no-hover">
                                <div class="col-12 d-flex flex-column position-relative">
                                   <div class="card-img">
                                       <img src="../Sources/car-mirror2.png" class="h-100" alt="">
@@ -557,7 +591,7 @@
                                   </div>
                                </div></a>
                             </div>
-                            <div class="col-4 p-5 h-100 card"><a href="Car-page.html" class="no-hover">
+                            <div class="col-lg-4 col-md-6 col-12 p-5 h-100 card"><a href="Car-page.html" class="no-hover">
                                <div class="col-12 d-flex flex-column position-relative">
                                   <div class="card-img">
                                       <img src="../Sources/porsche-model-macan1.png" class="h-100" alt="">
@@ -616,8 +650,8 @@
         <div class="section-header pt-4">
             You Might Like
         </div>
-        <div class="col-12 d-flex flex-row mt-5 mb-5 justify-content-center">
-            <div class="col-3 p-5 h-100 ">
+        <div class="col-12 d-flex flex-row flex-wrap mt-5 mb-5 justify-content-center">
+            <div class="col-lg-3 col-md-4 col-12 p-5 h-100 ">
                 <div class="col-12 d-flex flex-column position-relative">
                    <div class="card-img">
                        <img src="../Sources/porsche-model-panamera4.png" class="h-100" alt="">
@@ -638,7 +672,7 @@
                    </div>
                 </div>
              </div>
-             <div class="col-3 p-5 h-100 ">
+             <div class="col-lg-3 col-md-4 col-12 p-5 h-100 ">
                 <div class="col-12 d-flex flex-column position-relative">
                    <div class="card-img">
                        <img src="../Sources/porsche-model-macan.png" class="h-100" alt="">
@@ -659,7 +693,7 @@
                    </div>
                 </div>
              </div>
-             <div class="col-3 p-5 h-100 ">
+             <div class="col-lg-3 col-md-4 col-12 p-5 h-100 ">
                 <div class="col-12 d-flex flex-column position-relative">
                    <div class="card-img">
                        <img src="../Sources/porsche-model-panamera3.png" class="h-100" alt="">
@@ -695,8 +729,8 @@
             </div>
         </div>
 
-        <div class="col-12 d-flex flex-row justify-content-center mb-5">
-            <div class="col-2 d-flex flex-column">
+        <div class="col-12 d-flex flex-md-row flex-column mx-5 mx-md-0 flex-wrap justify-content-center mb-5">
+            <div class="col-md-2 col-6 my-3 d-flex flex-column">
                 <div class="footer-title">
                     More about porsche
                 </div>
@@ -710,7 +744,7 @@
                    <a href="Service.html">Porshe service</a>   
                 </div>
             </div>
-            <div class="col-2 d-flex flex-column">
+            <div class="col-md-2 col-6 my-3 d-flex flex-column">
                 <div class="footer-title">
                     Contact US
                 </div>
@@ -719,21 +753,21 @@
                 </div>
                 <div class="footer-item">
                     Contact suport 24/24
-                    <span class="highlight">+3714598756</span>
+                    <span class="highlight"><a href="tel:+3714598756">+3714598756</a></span>
                 </div>
             </div>
-            <div class="col-2 d-flex flex-column">
+            <div class="col-md-2 col-6 my-3  d-flex flex-column">
                 <div class="footer-title">
-                   <a href="#">Resources</a>   
+                  Resources
                 </div>
                 <div class="footer-item">
-                    <a href="#">FAQ</a> 
+                    <a href="../Sources/The models.pdf" target="_blank">FAQ</a> 
                 </div>
                 <div class="footer-item">
-                    <a href="#"> Terms & Conditions</a> 
+                    <a href="../Sources/Cookies Policy.docx" download> Terms & Conditions</a> 
                 </div>
                 <div class="footer-item">
-                   <a href="#">Privacy Policy</a>   
+                   <a href="../Sources/Privacy Policy.docx" download>Privacy Policy</a>   
                 </div>
             </div>
         </div>
