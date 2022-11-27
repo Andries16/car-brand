@@ -4,15 +4,30 @@
     --bs-primary: var(--bs-primary-rgb);
 }
 
-
-
 html{
     font-family:sans-serif;
     -ms-text-size-adjust:100%;
-    -webkit-text-size-adjust:100%
+    -webkit-text-size-adjust:100%;
+    scroll-behavior:smooth;
 }
 body{
     margin:0
+}
+
+option:hover,
+option:focus,
+option:active,
+option:checked {
+    background-color: rgb(153, 107, 47) !important;
+    color:white;
+}
+
+select:focus, input:focus{
+    box-shadow: none !important;
+    border-color: rgb(153, 107, 47) !important;
+}
+select:hover{
+    cursor: pointer;
 }
 
 .d-flex{
@@ -278,7 +293,17 @@ a.no-hover:hover{
     background-color:  rgb(153, 107, 47);
     background-image: linear-gradient(to bottom right,black, rgb(153, 107, 47), black);
     cursor: pointer;
+    padding: 2px !important;
+    border: 0;
+}
+
+.card-item-2:hover{
+    background-color:  rgb(153, 107, 47);
+    background-image: linear-gradient(to bottom right,rgb(255, 255, 255), rgb(153, 107, 47), rgb(255, 255, 255));
+    cursor: pointer;
     padding: 2px;
+    border: 0;
+    transition: all 0.5s ease-out;
 }
 
 .img-dark{
@@ -480,6 +505,11 @@ a.no-hover:hover{
     left: 56px;
     animation-delay: 0;
   }
+
+*{
+    transition:all 0.5s ease-out ;
+}
+
   @keyframes lds-facebook {
     0% {
       top: 8px;
