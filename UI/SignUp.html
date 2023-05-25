@@ -90,11 +90,32 @@
             </section>
         <!-- Container END -->
       </div>
-
+      <button type="button" class="btn btn-primary d-none" id="modal-trigger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        Launch static backdrop modal
+      </button>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" id="modal" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="alert-content">
+              
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Understood</button>
+            </div>
+          </div>
+        </div>
+      </div>
       <script src="https://kit.fontawesome.com/1abca24729.js" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js" integrity="sha512-j+F4W//4Pu39at5I8HC8q2l1BNz4OF3ju39HyWeqKQagW6ww3ZF9gFcu8rzUbyTDY7gEo/vqqzGte0UPpo65QQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-      
+      <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+
     <script>
       const form = document.getElementById("form");
 
@@ -123,13 +144,30 @@
         const password =   pIntput.value;
         const repass = repassI.value;
   
-        if(password !== repass)alert("passwords does not matches");
-        if(!emailPattern.test(email)){alert("email is not valid"); return};
+        if(password !== repass){
+          const modalContent = $("#alert-content");
+          modalContent.html("Password does not matches");
+          $("#modal-trigger").click();return;
+        }
         const u = {
           id:"000002",
           email:email,
           password:password
         }
+        const usersL = JSON.parse(localStorage.getItem("users")) || [];
+        usersL.forEach(element => {
+        if(element.email ==u.email){
+          const modalContent = $("#alert-content");
+          modalContent.html("Email is alerdy used. Try another email or sign in");
+          $("#modal-trigger").click();return;
+          }
+        });
+        if(!emailPattern.test(email)){
+          const modalContent = $("#alert-content");
+          modalContent.html("Email is not valid. Try a valid email");
+          $("#modal-trigger").click();return;
+        };
+       
         let users = JSON.parse(localStorage.getItem("users")) || [];
         users.push(u);
         localStorage.setItem("users",JSON.stringify(users));

@@ -62,39 +62,49 @@
                       <div class="mb-3 position-relative input-group-lg">
                         <input type="password" class="form-control" placeholder="Enter password" id="password" required>
                       </div>
-                  <!-- Remember me -->
                   <div class="mb-3 d-sm-flex justify-content-between">
                     <div>
-                      <input type="checkbox" class="form-check-input bg-dark" id="rememberCheck">
-                      <label class="form-check-label" for="rememberCheck">Remember me?</label>
                     </div>  
                     <a href="forgot-password.html">Forgot password?</a>
                   </div>
-                  <!-- Button -->
                   <div class="d-grid">
                     <button type="submit" class="btn btn-lg on-b text-white py-2" id="sign-in">Sign in</button>
                   </div>
                 </form>
-                <!-- Form END -->
               </div>
-              <!-- Sign in form START -->
             </div>
-          </div> <!-- Row END -->
+          </div>
         </div>
-        <!-- Container END -->
+      </div>
+      <button type="button" class="btn btn-primary d-none" id="modal-trigger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        Launch static backdrop modal
+      </button>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" id="modal" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="alert-content">
+              
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Understood</button>
+            </div>
+          </div>
+        </div>
       </div>
 
       <script src="https://kit.fontawesome.com/1abca24729.js" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js" integrity="sha512-j+F4W//4Pu39at5I8HC8q2l1BNz4OF3ju39HyWeqKQagW6ww3ZF9gFcu8rzUbyTDY7gEo/vqqzGte0UPpo65QQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-      
+      <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+
     <script>
      const form = document.getElementById("form");
-
-//mai bine prin fetch/get de facut)
-
-
-
 const users = JSON.parse(localStorage.getItem("users")) || [];
 
 const emailPattern = new RegExp("[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-z]");
@@ -115,7 +125,7 @@ if(!emailPattern.test(email)) return;
 const pIntput = document.getElementById("password")
 const password =    pIntput.value;
 const u = {
-  id:"000002",
+  id:Math.random().toString(),
   email:email,
   password:password
 }
@@ -127,7 +137,9 @@ else e.target.reset();
 });
 
 form.addEventListener("reset",()=>{
-alert("email or password is incorect");r
+  const modalContent = $("#alert-content");
+  modalContent.html("Email or password is incorect. Please retry again");
+  $("#modal-trigger").click();
 })
 
 function verif(u){
